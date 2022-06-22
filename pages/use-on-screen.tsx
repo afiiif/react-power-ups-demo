@@ -1,11 +1,14 @@
-import { useIntersection, useOnScreen } from 'react-power-ups';
+import { useOnScreen } from 'react-power-ups';
 
 export default function Demo() {
   const [ref, isOnScreen] = useOnScreen(false);
 
   return (
     <>
-      <div style={{ position: 'fixed' }}>isOnScreen: {isOnScreen ? 'Yes' : 'No'}</div>
+      <div style={{ position: 'fixed' }}>
+        <div>ℹ️ Scroll down</div>
+        <div>Tracked div is on screen? {isOnScreen ? 'Yes' : 'No'}</div>
+      </div>
 
       <div style={{ height: 2000 }} />
 

@@ -19,14 +19,16 @@ export default function Demo() {
 }
 
 function DemoOTPUseCase() {
-  const [timeLeft, actions] = useCountDown({ defaultDuration: 10_000 });
+  const [timeLeft, actions] = useCountDown({ defaultDuration: 10_000, startOnMount: true });
+
   const sendOTP = () => {
-    console.info('Sending OTP...');
+    console.info('Resending OTP...');
     actions.start();
   };
 
   return (
     <>
+      <p>OTP sent, check your phone!</p>
       <button onClick={sendOTP} disabled={!!timeLeft}>
         {timeLeft ? '🚫' : '🟢'} Send OTP
       </button>

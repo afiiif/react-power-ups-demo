@@ -5,7 +5,7 @@ export default function Demo() {
 
   return (
     <>
-      <button onClick={toggleModal}>Click Me</button>
+      <button onClick={toggleModal}>Open modal</button>
 
       <div
         style={{

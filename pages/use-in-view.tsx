@@ -2,20 +2,20 @@ import Head from 'next/head';
 import { useInView } from 'react-power-ups';
 
 export default function Demo() {
-  const [ref, isOnScreen] = useInView(false);
+  const [ref, isInView] = useInView(false);
 
   return (
     <>
       <div style={{ position: 'fixed' }}>
-        <h2>{isOnScreen ? 'Day' : 'Night'}</h2>
+        <h2>{isInView ? 'Day' : 'Night'}</h2>
         <div>ℹ️ Scroll down</div>
         <Head>
           <style
             dangerouslySetInnerHTML={{
               __html: `
                 body {
-                  background: ${isOnScreen ? 'lightskyblue' : 'midnightblue'};
-                  ${isOnScreen ? '' : 'color: #fff !important;'}
+                  background: ${isInView ? 'lightskyblue' : 'midnightblue'};
+                  ${isInView ? '' : 'color: #fff !important;'}
                   transition: all .5s ease;
                 }  
               `,

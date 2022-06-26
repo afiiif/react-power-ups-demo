@@ -5,6 +5,8 @@ const PAGES = [
   { href: '/use-toggle', title: 'useToggle' },
   { href: '/use-debounce', title: 'useDebounce' },
   { href: '/use-debounce-fn', title: 'useDebounceFn' },
+  { href: '/use-throttle', title: 'useThrottle' },
+  { href: '/use-throttle-fn', title: 'useThrottleFn' },
   { href: '/use-intersection', title: 'useIntersection' },
   { href: '/use-on-screen', title: 'useOnScreen' },
   { href: '/use-window-event', title: 'useWindowEvent' },

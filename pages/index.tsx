@@ -8,7 +8,7 @@ const PAGES = [
   { href: '/use-throttle', title: 'useThrottle' },
   { href: '/use-throttle-fn', title: 'useThrottleFn' },
   { href: '/use-intersection', title: 'useIntersection' },
-  { href: '/use-on-screen', title: 'useOnScreen' },
+  { href: '/use-in-view', title: 'useInView' },
   { href: '/use-window-event', title: 'useWindowEvent' },
   { href: '/use-count-down', title: 'useCountDown' },
   { href: '/use-first-mount', title: 'useFirstMount' },

@@ -1,20 +1,12 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import { useOnScreen } from 'react-power-ups';
+import { useInView } from 'react-power-ups';
 
 export default function Demo() {
-  const [ref, isOnScreen] = useOnScreen(false);
+  const [ref, isOnScreen] = useInView(false);
 
   return (
     <>
       <div style={{ position: 'fixed' }}>
-        <div>
-          This hook is deprecated, use{' '}
-          <Link href="/use-in-view">
-            <a>useInView</a>
-          </Link>{' '}
-          instead
-        </div>
         <h2>{isOnScreen ? 'Day' : 'Night'}</h2>
         <div>ℹ️ Scroll down</div>
         <Head>
@@ -22,8 +14,9 @@ export default function Demo() {
             dangerouslySetInnerHTML={{
               __html: `
                 body {
-                  background: ${isOnScreen ? 'lightskyblue' : 'darkslategray'};
+                  background: ${isOnScreen ? 'lightskyblue' : 'midnightblue'};
                   ${isOnScreen ? '' : 'color: #fff !important;'}
+                  transition: all .5s ease;
                 }  
               `,
             }}

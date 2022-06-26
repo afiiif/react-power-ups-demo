@@ -11,6 +11,8 @@ const PAGES = [
   { href: '/use-in-view', title: 'useInView' },
   { href: '/use-window-event', title: 'useWindowEvent' },
   { href: '/use-count-down', title: 'useCountDown' },
+  { href: '/use-local-storage', title: 'useLocalStorage' },
+  { href: '/use-session-storage', title: 'useSessionStorage' },
   { href: '/use-first-mount', title: 'useFirstMount' },
   { href: '/use-update-effect', title: 'useUpdateEffect' },
   { href: '/use-previous', title: 'usePrevious' },
@@ -30,7 +32,7 @@ export default function HomePage() {
         on Next.js App
       </h1>
 
-      <ul>
+      <ol>
         {PAGES.map(({ href, title }) => (
           <li key={title}>
             <Link href={href}>
@@ -38,7 +40,7 @@ export default function HomePage() {
             </Link>
           </li>
         ))}
-      </ul>
+      </ol>
 
       <hr />
       <div>
